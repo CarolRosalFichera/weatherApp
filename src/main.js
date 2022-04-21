@@ -1,9 +1,11 @@
+// VARIABLES
 let apiKey = "13eb9aa094479d1e47337cf35fcd3f28";
 
-let city = "sao paulo";
+let city = "Austin";
 
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+// FUNCTIONS
 function showWeatherDetails(response) {
     console.log(response.data);
     //
@@ -19,9 +21,26 @@ function showWeatherDetails(response) {
     windDetail.innerHTML = `${windMath} km/h`;
     //
     let description = document.querySelector(".weather-descript")
-    description.innerHTML = `${response.data.weather[0].description}`
+    description.innerHTML = `${response.data.weather[0].description}`;
+    //
 
 }
 
 
+function showPosition(position) {
+    console.log(position)
+    
+}
+
+
+// CALLS
+    
 axios.get(apiUrl).then(showWeatherDetails);
+
+
+
+let cityInput = document.querySelector(".city-name")
+cityInput.innerHTML = city;
+
+navigator.geolocation.getCurrentPosition(showPosition);
+
