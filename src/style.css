@@ -17,7 +17,7 @@ h3 {
 .weather-app {
     min-height: 100vh;
     position: relative;
-    /* background-image: url('../media/rainy.jpg'); */
+    /* background-image: url('../media/sunny.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     transition: 500ms;
