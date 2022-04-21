@@ -5,7 +5,20 @@ let city = "sao paulo";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 function ShowTemperature(response) {
-    console.log(response)
+    console.log(response.data);
+    let tempMath = Math.round(response.data.main.temp);
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = `${tempMath} °C`;
+    //
+    let weatherDetails = document.querySelector(".humidity");
+    weatherDetails.innerHTML = `${response.data.main.humidity}%`;
+    //
+    let windDetail = document.querySelector(".wind")
+    let windMath = Math.round(response.data.wind.speed);
+    windDetail.innerHTML = `${windMath} km/h`
+    
+
+    
 }
 
 

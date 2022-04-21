@@ -67,8 +67,8 @@ h3 {
     font-size: 60px;
 }
 
-.temperature {
-    font-size: 80px;
+#temperature {
+    font-size: 40px;
     margin: 0;
 }
 
