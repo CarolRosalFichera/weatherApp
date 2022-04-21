@@ -20,10 +20,7 @@ function showWeatherDetails(response) {
     //
     let description = document.querySelector(".weather-descript")
     description.innerHTML = `${response.data.weather[0].description}`
-    //
-    let condition = document.querySelector(".weather-condition");
-    condition.innerHTML = `${response.data.weather[0].main}`
-    
+
 }
 
 

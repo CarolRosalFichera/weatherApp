@@ -35,6 +35,10 @@ h3 {
     z-index: 0;
 }
 
+.weather-descript{
+    text-transform: capitalize;
+}
+
 .infoContainer {
     position: absolute;
     top: 0;
@@ -58,7 +62,6 @@ h3 {
 .temperature {
     margin: 5px;
     padding: 5px;
-    border-right: 1px rgb(212, 212, 212) solid;
 }
 
 .city-time h1 {
