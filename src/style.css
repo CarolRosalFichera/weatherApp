@@ -1,6 +1,153 @@
 body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    background: rgb(0, 0, 0);
+    background: rgb(214, 213, 200);
     color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h3 {
+    font-weight: 400;
+}
+
+
+.weather-app {
+    min-height: 100vh;
+    position: relative;
+    /* background-image: url('../media/rainy.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.weather-app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.infoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    padding: 50px;
+}
+
+.infoContainer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-time,
+.temperature {
+    margin: 5px;
+    padding: 5px;
+    border-right: 1px rgb(212, 212, 212) solid;
+}
+
+.city-time h1 {
+    margin: 5px;
+    margin-bottom: 2px;
+    font-size: 60px;
+}
+
+.temperature {
+    font-size: 80px;
+    margin: 0;
+}
+
+.panel {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 20%;
+    background: rgba(0, 0, 0, 0.452);
+    box-shadow: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px 10px;
+
+}
+
+.panel form {
+    margin: 0;
+}
+
+.submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    margin: 0;
+    border: none;
+    border-radius: 25% 50%;
+    box-shadow: rgba(17, 17, 17, 0.212);
+    background: #b6602f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #fff;
+    color: #111;
+    transition: all 150ms ease;
+}
+
+
+.search {
+    background: none;
+    border: none;
+    border-bottom: 1px rgb(212, 212, 212) solid;
+    font-size: 20px;
+    padding: 0;
+    color: #fff;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.search::placeholder {
+    color: #ccc;
+}
+
+.panel ul {
+    padding: 20px;
+    margin: 10px;
+    border-bottom: 1px rgb(212, 212, 212) solid;
+}
+
+.panel ul li {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.panel ul h4 {
+    font-weight: bold;
+}
+
+.city {
+    display: block;
+    cursor: pointer;
+}
+
+.city:hover {
+    color: #ccc;
 }
