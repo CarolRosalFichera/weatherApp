@@ -4,8 +4,9 @@ let city = "sao paulo";
 
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-function ShowTemperature(response) {
+function showWeatherDetails(response) {
     console.log(response.data);
+    //
     let tempMath = Math.round(response.data.main.temp);
     let tempElement = document.querySelector("#temperature");
     tempElement.innerHTML = `${tempMath} °C`;
@@ -15,11 +16,15 @@ function ShowTemperature(response) {
     //
     let windDetail = document.querySelector(".wind")
     let windMath = Math.round(response.data.wind.speed);
-    windDetail.innerHTML = `${windMath} km/h`
-    
-
+    windDetail.innerHTML = `${windMath} km/h`;
+    //
+    let description = document.querySelector(".weather-descript")
+    description.innerHTML = `${response.data.weather[0].description}`
+    //
+    let condition = document.querySelector(".weather-condition");
+    condition.innerHTML = `${response.data.weather[0].main}`
     
 }
 
 
-axios.get(apiUrl).then(ShowTemperature);
+axios.get(apiUrl).then(showWeatherDetails);
