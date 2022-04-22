@@ -1,9 +1,34 @@
 // VARIABLES
 let apiKey = "13eb9aa094479d1e47337cf35fcd3f28";
-
 let city = "Austin";
-
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+let days = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thur",
+    "Fri",
+    "Sat"
+];
+
+
+let now = new Date();
+let h1 = document.querySelector(".date");
+let date = now.getDate()
+let hour = now.getHours();
+let minutes = now.getMinutes()
+let year = now.getFullYear();
+let day = now.getDay();
+
+h1.innerHTML = `${day} April ${date}, ${hour}:${minutes}, ${year}`;
+
+
+
+
+
+
 
 // FUNCTIONS
 function showWeatherDetails(response) {
@@ -23,14 +48,8 @@ function showWeatherDetails(response) {
     let description = document.querySelector(".weather-descript")
     description.innerHTML = `${response.data.weather[0].description}`;
     //
-
 }
 
-
-function showPosition(position) {
-    console.log(position)
-    
-}
 
 
 // CALLS
@@ -41,6 +60,4 @@ axios.get(apiUrl).then(showWeatherDetails);
 
 let cityInput = document.querySelector(".city-name")
 cityInput.innerHTML = city;
-
-navigator.geolocation.getCurrentPosition(showPosition);
 
