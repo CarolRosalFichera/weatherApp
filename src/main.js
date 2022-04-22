@@ -3,15 +3,6 @@ let apiKey = "13eb9aa094479d1e47337cf35fcd3f28";
 let city = "Austin";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-let days = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thur",
-    "Fri",
-    "Sat"
-];
 
 
 let now = new Date();
@@ -20,9 +11,13 @@ let date = now.getDate()
 let hour = now.getHours();
 let minutes = now.getMinutes()
 let year = now.getFullYear();
-let day = now.getDay();
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let day = days[now.getDay()];
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let month = months[now.getMonth()];
 
-h1.innerHTML = `${day} April ${date}, ${hour}:${minutes}, ${year}`;
+
+h1.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}, ${year}`;
 
 
 
