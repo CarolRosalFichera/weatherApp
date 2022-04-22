@@ -17,7 +17,7 @@ h3 {
 .weather-app {
     min-height: 100vh;
     position: relative;
-    background-image: url('../media/rainny.jpg');
+    /* background-image: url('../media/rainny.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     transition: 500ms;
@@ -117,7 +117,7 @@ h3 {
     background: none;
     border: none;
     border-bottom: 1px rgb(212, 212, 212) solid;
-    font-size: 20px;
+    font-size: 15px;
     padding: 0;
     color: #fff;
 }
@@ -143,6 +143,7 @@ h3 {
 
 .panel ul h4 {
     font-weight: bold;
+    margin: 0;
 }
 
 .city {
