@@ -65,12 +65,5 @@ function getCurrentPosition() {
     axios.get(apiUrl).then(showWeatherDetails);
 }
 
-
 let form = document.querySelector("#locationInput")
 form.addEventListener("submit", searchCity)
-
-
-
-
-// CALLS
-    
