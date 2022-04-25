@@ -24,6 +24,16 @@ h3 {
     opacity: 1;
 }
 
+.temp{
+    font-size: 50px;
+}
+.units{
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 6px;
+    vertical-align: top;
+    margin-left: -1px;
+}
 
 
 .weather-app::before {
