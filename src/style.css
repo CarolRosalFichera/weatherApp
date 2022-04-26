@@ -28,15 +28,19 @@ h3 {
     font-size: 70px;
     margin: 0;
 }
+.city-time{
+    margin-left: 100px;
+}
 
 .units{
 display: inline-block;
-font-size: 16px;
-line-height: 24px;
-margin-top: 6px;
-padding-left: 6px;
-vertical-align: top;
+font-size: 20px;
+line-height: 10px;
+margin-top: 1px;
+padding-left: 1px;
+vertical-align: text-top;
 }
+
 .date{
     font-size: 30px;
 }
@@ -88,7 +92,7 @@ vertical-align: top;
 
 .panel {
     position: absolute;
-    width: 30%;
+    width: 25%;
     height: 100%;
     top: 0;
     right: 20%;

@@ -11,7 +11,7 @@ function showWeatherDetails(response) {
     //
     let tempElement = document.querySelector(".temperature");
     let tempMath = Math.round(response.data.main.temp);
-    tempElement.innerHTML = `${tempMath} °C`;
+    tempElement.innerHTML = `${tempMath}`;
     //
     let weatherDetails = document.querySelector(".humidity");
     weatherDetails.innerHTML = `${response.data.main.humidity}%`;
