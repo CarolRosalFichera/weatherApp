@@ -88,15 +88,17 @@ vertical-align: text-top;
 
 .temperature {
     font-size: 50px;
+    text-decoration: none;
 
 }
 .units .active{
     color:rgb(255, 255, 255);
-    cursor: pointer;
     text-decoration: none;
+    
 }
 
-.units .active:hover {
+.units :hover {
+    cursor: default;
     text-decoration: none;
 }
 
