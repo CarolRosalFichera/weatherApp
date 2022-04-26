@@ -7,7 +7,6 @@ function showCity() {
 
 
 
-
 function showWeatherDetails(response) {
     console.log(response.data);
     //
@@ -27,15 +26,15 @@ function showWeatherDetails(response) {
     //
     let iconElement = document.querySelector("#icon")
     iconElement.setAttribute('src', `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-}
+    //
+    celsiusTemperature = response.data.main.temp;
 
+}
 
 let btnSearch = document.querySelector(".submit");
 btnSearch.addEventListener('click', showCity);
 
 
-
-// CURRENT TIME INFO
 let now = new Date();
 let h1 = document.querySelector(".date");
 let date = now.getDate()
@@ -58,9 +57,6 @@ let month = months[now.getMonth()];
 h1.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}, ${year}`
 
 
-
-// FUNCTIONS
-
 function searchCity(event) {
     event.preventDefault();
     let cityElement = document.querySelector(".city-name")
@@ -81,4 +77,12 @@ function getCurrentPosition() {
 let form = document.querySelector("#locationInput")
 form.addEventListener("submit", searchCity)
 
+function showFahrenheitTemperature(event) {
+    event.preventDefault();
+    let fahrenheitTemperature = (14 * 9 / 5) + 32;
+    let temperatureElement = document.querySelector('.temperature')
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener('click', showFahrenheitTemperature)
