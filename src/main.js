@@ -77,12 +77,36 @@ function getCurrentPosition() {
 let form = document.querySelector("#locationInput")
 form.addEventListener("submit", searchCity)
 
+
+
+// FAHRENHEIT
 function showFahrenheitTemperature(event) {
     event.preventDefault();
-    let fahrenheitTemperature = (14 * 9 / 5) + 32;
     let temperatureElement = document.querySelector('.temperature')
+    let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener('click', showFahrenheitTemperature)
+// FAHRENHEIT
+
+let celsiusTemperature = null;
+
+//CELSIUS
+function showCelsiusTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector('.temperature')
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    
+}
+
+let celsiusLink = document.querySelector("#celsius-link")
+celsiusLink.addEventListener("click",showCelsiusTemperature);
+
+
+
+
+
+
+
