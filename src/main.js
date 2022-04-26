@@ -6,6 +6,8 @@ function showCity() {
 }
 
 
+
+
 function showWeatherDetails(response) {
     console.log(response.data);
     //
@@ -23,6 +25,8 @@ function showWeatherDetails(response) {
     let description = document.querySelector(".weather-descript")
     description.innerHTML = `${response.data.weather[0].description}`;
     //
+    let iconElement = document.querySelector("#icon")
+    iconElement.setAttribute('src', `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 
@@ -35,14 +39,24 @@ btnSearch.addEventListener('click', showCity);
 let now = new Date();
 let h1 = document.querySelector(".date");
 let date = now.getDate()
+
 let hour = now.getHours();
+if (hour < 10) {
+    hour = `0${hour}`
+}
+
 let minutes = now.getMinutes()
+if (minutes < 10) {
+    minutes = `0${minutes}`
+}
+
 let year = now.getFullYear();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let month = months[now.getMonth()];
 h1.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}, ${year}`
+
 
 
 // FUNCTIONS
