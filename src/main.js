@@ -8,8 +8,6 @@ function showCity() {
 
 function showWeatherDetails(response) {
     console.log(response.data);
-    let cityInput = document.querySelelctor(".city-name")
-    cityInput.innerHTML = `${response.data.name}`
     //
     let tempElement = document.querySelector(".temperature");
     let tempMath = Math.round(response.data.main.temp);
