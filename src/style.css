@@ -13,7 +13,7 @@ h3 {
 
 .weather-app {
     min-height: 100vh;
-    position: relative;
+    position:relative;
     /* background-image: url('../media/rainny.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,8 +103,8 @@ vertical-align: text-top;
     color:#fff;
 }
 
-.weather-forecast{
-    display: inline-block;
+#forecast{
+    display:inline-block;
     height: 50px;
     line-height: 1;
     margin-right: 7px;
@@ -131,6 +131,7 @@ vertical-align: text-top;
 .panel form {
     margin: 0;
 }
+
 
 .submit {
     position: absolute;
