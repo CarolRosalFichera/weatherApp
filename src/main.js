@@ -59,32 +59,54 @@ h1.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}, ${year}`
 
 
 
-
 function displayForecast() {
-    let forecastElement = document.querySelector("#forecast");
+    let forecastElement = document.querySelector('#forecast') 
 
     let forecastHTML = `<div class="row">`;
-    let days = ["Thu", "Fri", "Sat", "Sun"];
-    days.forEach(function (day) {
-        foreastHTML =
-            forecastHTML +
-            `<div class="col-2"
-            <div class="weather-forecast-date">${day}</div>
-            <img "http://openweathermap.org/img/wn/10d@2x.png" 
-            alt="rainy" 
-            width="40"
+    forecastHTML =
+        forecastHTML +
+        `
+        <div class="col-2">
+            <div class="weather-forecast-date">
+            Mon
+            </div>
+            <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
+            alt="Mostly cloudy"
+            width="40px"
             />
             <div class="weather-forecast-temperature">
-            <span class="weather-forecast-temperature-max"> 18 </span>
-            <span class="weather-forecast-temperature-min"> 12 </span>
+                <span class="weather-forecast-temperature-max">
+                18° 
+                </span>
+                <span class="weather-forecast-temperature-min">
+                12°
+                </span>
             </div>
+        </div>
+    `;
+    forecastHTML = forecastHTML +
+    `
+        <div class="col-2">
+            <div class="weather-forecast-date">
+            Mon
             </div>
-            `;
-    });
-    forecastHTML = forecastHTML + `</div>`;
+            <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
+            alt="Mostly cloudy"
+            width="40px"
+            />
+            <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">
+                18° 
+                </span>
+                <span class="weather-forecast-temperature-min">
+                12°
+                </span>
+            </div>
+        </div>
+    `;
+    forecastHTML = forecastHTML + `</div>`
     forecastElement.innerHTML = forecastHTML;
 }
-
 
     function searchCity(event) {
         event.preventDefault();
@@ -136,8 +158,7 @@ function displayForecast() {
     celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 
-    displayForecast();
+    
 
-
-
+displayForecast();
 

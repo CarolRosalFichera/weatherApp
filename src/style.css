@@ -103,16 +103,27 @@ vertical-align: text-top;
     color:#fff;
 }
 
-#forecast{
-    display:inline-block;
-    height: 50px;
-    line-height: 1;
-    margin-right: 7px;
-    padding-top: 80px;
-    text-align: center;
-    width: 50px;
-    
+
+.weather-forecast{
+   margin-top: 50px;
+   text-align: center;
 }
+
+.weather-forecast-date{
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.weather-forecast-temperature{
+    font-size: 13px;
+}
+
+.weather-forecast-temperature-min{
+    color:rgba(255, 255, 255, 0.699);
+}
+
+
 
 
 .panel {
