@@ -14,7 +14,7 @@ h3 {
 .weather-app {
     min-height: 100vh;
     position: relative;
-    background-image: url('../media/rainny.jpg');
+    /* background-image: url('../media/rainny.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     transition: 500ms;
@@ -102,6 +102,18 @@ vertical-align: text-top;
     text-decoration: none;
     color:#fff;
 }
+
+.weather-forecast{
+    display: inline-block;
+    height: 50px;
+    line-height: 1;
+    margin-right: 7px;
+    padding-top: 80px;
+    text-align: center;
+    width: 50px;
+    
+}
+
 
 .panel {
     position: absolute;
