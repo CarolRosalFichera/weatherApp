@@ -165,8 +165,23 @@ function displayForecast(response) {
     }
 
     let celsiusLink = document.querySelector("#celsius-link")
-    celsiusLink.addEventListener("click", showCelsiusTemperature);
-
-
+celsiusLink.addEventListener("click", showCelsiusTemperature);
     
 
+let qt = document.querySelector("#quote")
+let btn = document.querySelector(".submit")
+
+btn.addEventListener('click', function () {
+    var randomQuotes = quotes[Math.floor(Math.random() * quotes.length)]
+    qt.innerHTML = randomQuotes;
+})
+
+let quotes = [
+    "Somewhere, something incredible is waiting to be known. - Sharon Begley",
+    "The past cannot be changed. The future is yet in your power. - Mary Pickford",
+    "Your big opportunity may be right where you are now. -Napoleon Hill",
+    "You and you alone are the only person who can live the life that can write the story that you were meant to tell. - Kerry Washington",
+    "It isn't where you came from. It's where you're going that counts. Ella Fitzgerald",
+    "What great thing would you attempt if you knew you could not fail? - Robert H. Schuller",
+    "One day, you'll be just a memory for some people. Do your best to be a good one. - Unknown"
+];

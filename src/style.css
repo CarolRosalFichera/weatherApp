@@ -1,12 +1,17 @@
 body {
     margin: 0;
-    background: rgb(214, 213, 200);
+    background-image: url(../media/rainny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
 }
+
 * {
     box-sizing: border-box;
 }
+
 h3 {
+    color:#fff;
     font-weight: 200;
     font-size: 100px;
     font-family: 'Rubik',
@@ -16,7 +21,6 @@ h3 {
 .weather-app {
     min-height: 100vh;
     position:relative;
-    background-image: url('../media/snowy.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     transition: 500ms;
@@ -234,10 +238,10 @@ vertical-align: text-top;
     color: #ccc;
 }
 
-.quote{
+#quote{
     display: block;
     margin-top: 100px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     color: white;
     font-family: 'Rubik',
