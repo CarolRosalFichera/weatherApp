@@ -185,3 +185,25 @@ let quotes = [
     "What great thing would you attempt if you knew you could not fail? - Robert H. Schuller",
     "One day, you'll be just a memory for some people. Do your best to be a good one. - Unknown"
 ];
+
+
+
+
+function changeBg() {
+
+    const images = [
+        'url(../media/img1.jpg)',
+        'url(../media/img2.jpg)',
+        'url(../media/img3.jpg)',
+        'url(../media/img4.jpg)',
+        'url(../media/img5.jpg)'
+    ]
+
+    const section = document.querySelector('section')
+
+    const bg = images[Math.floor(Math.random() * images.length)]
+    
+    section.style.backgroundImage = bg;
+}
+
+// setInterval(changeBg, 500)

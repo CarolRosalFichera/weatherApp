@@ -1,9 +1,19 @@
 body {
     margin: 0;
-    background-image: url(../media/rainny.jpg);
+    background-color: #ccc;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+}
+section {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: url(../media/img1.jpg);
+    background-repeat: no-repeat;
+
 }
 
 * {
