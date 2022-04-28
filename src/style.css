@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-family: 'Rubik',sans-serif;
     background: rgb(214, 213, 200);
     color: #fff;
 }
@@ -8,23 +7,30 @@ body {
     box-sizing: border-box;
 }
 h3 {
-    font-weight: 400;
+    font-weight: 200;
+    font-size: 100px;
+    font-family: 'Rubik',
+    sans-serif;
 }
 
 .weather-app {
     min-height: 100vh;
     position:relative;
-    /* background-image: url('../media/rainny.jpg'); */
+    background-image: url('../media/snowy.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     transition: 500ms;
     opacity: 1;
 }
 .city-name {
+    color: #fff;
+    font-family: 'Rubik',
+    sans-serif;
     font-size: 70px;
     text-transform: capitalize;
 }
 .temp{
+    color: #fff;
     font-size: 70px;
     margin: 0;
 }
@@ -42,7 +48,10 @@ vertical-align: text-top;
 }
 
 .date{
+    color: white;
     font-size: 30px;
+    font-family: 'Rubik',
+    sans-serif;
 }
 
 .weather-app::before {
@@ -58,6 +67,8 @@ vertical-align: text-top;
 
 .weather-descript{
     text-transform: capitalize;
+    font-family: 'Rubik',
+    sans-serif;
 }
 
 .infoContainer {
@@ -81,14 +92,19 @@ vertical-align: text-top;
 }
 
 .city-time h1 {
+    font-family: 'Rubik',
+    sans-serif;
     margin: 5px;
     margin-bottom: 2px;
     font-size: 60px;
 }
 
 .temperature {
+    font-family: 'Rubik',
+    sans-serif;
     font-size: 50px;
     text-decoration: none;
+    color:#fff;
 
 }
 .units .active{
@@ -113,17 +129,25 @@ vertical-align: text-top;
     font-weight: bold;
     font-size: 16px;
     color: rgb(255, 255, 255);
+    
 }
 
 .weather-forecast-temperature{
     font-size: 13px;
+    color:rgba(255, 255, 255, 0.89);
 }
 
 .weather-forecast-temperature-min{
-    color:rgba(255, 255, 255, 0.699);
+    color:rgba(255, 255, 255, 0.596);
 }
 
+.col-2{
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.39);
+   
 
+}
 
 
 .panel {
@@ -197,6 +221,7 @@ vertical-align: text-top;
 .panel ul h4 {
     font-weight: bold;
     margin: 0;
+    color:#fff;
 }
 
 .city {
@@ -214,8 +239,12 @@ vertical-align: text-top;
     margin-top: 100px;
     font-size: 30px;
     text-align: center;
+    color: white;
+    font-family: 'Rubik',
+    sans-serif cursive;
 }
 
 em {
     font-size: 10px;
 }
+

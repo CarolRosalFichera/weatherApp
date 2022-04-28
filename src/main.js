@@ -109,6 +109,7 @@ function displayForecast(response) {
                 </span>
             </div>
         </div>
+        
     `;
     }        
     })
