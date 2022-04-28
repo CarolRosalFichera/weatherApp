@@ -257,6 +257,9 @@ vertical-align: text-top;
     font-family: 'Rubik',
     sans-serif cursive;
 }
+.openSource{
+    color: #fff;
+}
 
 em {
     font-size: 10px;
