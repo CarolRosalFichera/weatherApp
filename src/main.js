@@ -212,3 +212,18 @@ btn.addEventListener("click", changeBg)
 
 /////////////////////////////////////////////
 
+let city = document.querySelector(".cities")
+
+function panelCities(){
+city.addEventListener("click", e => {
+  e.preventDefault();
+    alert(`🌞 Please type city name on: 
+    
+    Search city name 
+
+    ⛅for weather info.🌧️
+     `)
+});
+}
+
+panelCities();
